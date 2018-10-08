@@ -22,23 +22,23 @@ RUN apt-get update && \
         pkg-config \
         python3-pyqt5 \
         unzip \
-        wget \
-        zlib1g-dev
+        wget
+#        zlib1g-dev
 
 # Install pip version of Ray and some other libraries
 RUN pip install \
-    colorlog \
-    cython==0.27.3 \
-    dill \
-    flatbuffers \
-    gym[atari] \
-    lz4 \
-    opencv-python==3.2.0.8 \
-    PyOpenGL \
-    PyOpenGL_accelerate \
+#    colorlog \
+#    cython==0.27.3 \
+#    dill \
+#    flatbuffers \
+#    gym[atari] \
+#    lz4 \
+#    opencv-python==3.2.0.8 \
+#    PyOpenGL \
+#    PyOpenGL_accelerate \
     ray \
-    tabulate \
-    ujson
+#    tabulate \
+#    ujson
 
 RUN pip install --upgrade \
     git+git://github.com/hyperopt/hyperopt.git
