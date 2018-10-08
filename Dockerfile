@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-py3
+FROM tensorflow/tensorflow:1.10.1-py3
 LABEL maintaner="Martin Isaksson"
 # FROM tensorflow/tensorflow:latest-gpu-py3
 
@@ -10,23 +10,34 @@ ARG objectmanagerport=8076
 # Update, upgrade and install things using apt
 RUN apt-get update && \
     apt-get install -y \
-        git \
-        zlib1g-dev \
-        python3-pyqt5 \
+        autoconf \
+        bison \
+        build-essential \
         cmake \
-        libgl1-mesa-glx
+        curl \
+        flex \
+        git \
+        libgl1-mesa-glx \
+        libtool \
+        pkg-config \
+        python3-pyqt5 \
+        unzip \
+        wget \
+        zlib1g-dev
 
 # Install pip version of Ray and some other libraries
 RUN pip install \
-    ray \
-    gym[atari] \
-    opencv-python==3.2.0.8 \
-    lz4 \
+    colorlog \
+    cython==0.27.3 \
     dill \
+    flatbuffers \
+    gym[atari] \
+    lz4 \
+    opencv-python==3.2.0.8 \
     PyOpenGL \
     PyOpenGL_accelerate \
+    ray \
     tabulate \
-    colorlog \
     ujson
 
 RUN pip install --upgrade \
