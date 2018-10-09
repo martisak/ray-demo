@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:1.10.1-py3
+FROM tensorflow/tensorflow:latest-py3
 LABEL maintaner="Martin Isaksson"
 # FROM tensorflow/tensorflow:latest-gpu-py3
 
@@ -10,17 +10,17 @@ ARG objectmanagerport=8076
 # Update, upgrade and install things using apt
 RUN apt-get update && \
     apt-get install -y \
-        autoconf \
-        bison \
+        # autoconf \
+        # bison \
         build-essential \
         cmake \
         curl \
-        flex \
+        # flex \
         git \
-        libgl1-mesa-glx \
-        libtool \
-        pkg-config \
-        python3-pyqt5 \
+        # libgl1-mesa-glx \
+        # libtool \
+        # pkg-config \
+        # python3-pyqt5 \
         unzip \
         wget
 #        zlib1g-dev
