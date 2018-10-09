@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-py3
+FROM python:3
 LABEL maintaner="Martin Isaksson"
 # FROM tensorflow/tensorflow:latest-gpu-py3
 
