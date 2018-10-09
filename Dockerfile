@@ -36,12 +36,12 @@ RUN pip install \
 #    opencv-python==3.2.0.8 \
 #    PyOpenGL \
 #    PyOpenGL_accelerate \
-    ray \
+    ray
 #    tabulate \
 #    ujson
 
-RUN pip install --upgrade \
-    git+git://github.com/hyperopt/hyperopt.git
+# RUN pip install --upgrade \
+#    git+git://github.com/hyperopt/hyperopt.git
 
 # CMD ["tensorboard",  "--logdir=/root/ray_results/", "--port=3000"]
 
