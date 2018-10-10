@@ -36,7 +36,7 @@ RUN apt-get update && \
 
 
 # Install pip version of Ray and some other libraries
-RUN pip install -U \
+RUN pip3 install -U \
     colorlog \
     cython==0.27.3 \
     dill \
@@ -55,9 +55,9 @@ RUN pip install -U \
     wheel \
     mock
 
-RUN pip install -U keras_applications==1.0.5 keras_preprocessing==1.0.3 --no-deps
+RUN pip3 install -U keras_applications==1.0.5 keras_preprocessing==1.0.3 --no-deps
 
-RUN pip install --upgrade \
+RUN pip3 install --upgrade \
     git+git://github.com/hyperopt/hyperopt.git
 
 # Tensorflow
