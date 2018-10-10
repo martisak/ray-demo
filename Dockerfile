@@ -30,9 +30,9 @@ RUN apt-get update && \
 
 ## Bazel
 
-RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
-RUN curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
-RUN sudo apt-get update && sudo apt-get install
+# RUN echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+# RUN curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+# RUN sudo apt-get update && sudo apt-get install
 
 
 # Install pip version of Ray and some other libraries
