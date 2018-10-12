@@ -1,3 +1,0 @@
-[submodule "ray-gym"]
-	path = ray-gym
-	url = https://github.com/martisak/ray-gym.git
