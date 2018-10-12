@@ -1,9 +1,6 @@
 FROM ubuntu:xenial
 LABEL maintaner="Martin Isaksson"
 
-# Ray worker arguments
-ARG redisaddress=192.168.0.7:6379
-
 # Update, upgrade and install things using apt
 RUN apt-get update && \
     apt-get install -y \
@@ -48,5 +45,5 @@ ENV LANG C.UTF-8
 # Ray worker start command
 CMD ray start \
         --object-manager-port=8076 \
-        --redis-address=$redisaddress \
+        --redis-address=192.168.0.7:6379 \
         --num-workers=3
