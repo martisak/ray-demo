@@ -4,6 +4,12 @@ node_js:
 
 sudo: required
 
+git:
+  submodules: false
+
+before_install:
+  - git submodule update --init
+
 services:
   - docker
 
