@@ -41,8 +41,10 @@ RUN pip3 install -U \
 RUN pip3 install --upgrade \
     git+git://github.com/hyperopt/hyperopt.git
 
-# Tensorflow
 
+COPY ray-gym /root/
+
+# Tensorflow
 # CMD ["tensorboard",  "--logdir=/root/ray_results/", "--port=3000"]
 
 # Ray worker start command
