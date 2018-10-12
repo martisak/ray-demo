@@ -41,8 +41,8 @@ RUN pip3 install -U \
 RUN pip3 install --upgrade \
     git+git://github.com/hyperopt/hyperopt.git
 
-
-COPY ray-gym /root/
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 
 # Tensorflow
 # CMD ["tensorboard",  "--logdir=/root/ray_results/", "--port=3000"]
