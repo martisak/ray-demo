@@ -11,7 +11,9 @@ RUN apt-get update && \
         python3-dev \
         python3-pip \
         python3-pyqt5 \
-        wget
+        wget \
+        iputils-ping \
+        vim
 
 # Install pip version of Ray and some other libraries
 RUN pip3 install -U \
